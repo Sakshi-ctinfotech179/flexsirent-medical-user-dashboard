@@ -1,0 +1,1096 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  scroll-padding-top: 100px;
+  word-break: break-word;
+}
+
+body {
+  color: var(--text-dark);
+  background: #F9FAFB;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding: 0;
+    list-style: none;
+    margin: 0;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+}
+:root {
+  --primary: #0A8489;
+  --text_dark: #0D0D0D;
+  --text_para: #4B5563;
+--text-green:#15803D;
+--text-red:#BA1A1A;
+ 
+}
+
+@font-face {
+  font-family: "Agrandir-Regular";
+  src: url(../fonts/Agrandir-Regular.otf);
+}
+
+@font-face {
+  font-family: "Agrandir-TextBold";
+  src: url(../fonts/Agrandir-TextBold.otf);
+}
+
+.ct_ff_Agrandir_regular {
+  font-family: "Agrandir-Regular";
+}
+
+.ct_ff_Agrandir_bold {
+  font-family: "Agrandir-TextBold";
+}
+/* custom color */
+.ct_text_primary{
+  color: var(--primary);
+}
+
+.ct_text_para{
+color: var(--text_para);
+}
+
+.ct_text_dark{
+  color: var(--text_dark);
+}
+.ct_text_red{
+  color: var(--text-red) !important;
+}
+
+
+/* custom padding */
+.ct_px_20{
+    padding-inline: 20px;
+}
+ .ct_px_28{
+  padding-inline: 28px;
+ }
+ .ct_px_32 {
+    padding-inline: 32px;
+}
+
+
+/* margin */
+.ct_mb_16{
+  margin-bottom: 16px;
+}
+
+/* cutom font */
+
+.ct_fs_28{
+  font-size: 28px;
+}
+.ct_fs_18{
+  font-size: 18px;
+}
+.ct_fs_14{
+  font-size: 14px;
+}
+.ct_fs_12{
+  font-size: 12px;
+}
+
+
+
+
+/* sidebar header css */
+
+.ct_side_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 258px;
+    height: 100vh;
+  background: linear-gradient(180deg, #0A8589 0%, #0A8589 100%);
+
+    display: flex;
+    flex-direction: column;
+  box-shadow: 0px 14px 42px 0px #0810350f;
+    z-index: 99;
+       /* Smooth animation */
+    transition: left 0.4s ease-in-out;
+}
+
+
+.ct_side_bar ul{
+    flex: 1;
+    overflow-y: auto;
+    padding-inline: 20px;
+}
+
+.ct_side_bar ul li a {
+  padding: 12px 20px;
+  transition: 0.4s ease all;
+  width: 100%;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+ 
+  position: relative;
+  border-radius: 12px;
+
+
+}
+
+
+.ct_side_bar ul li+li {
+  margin-top: 16px;
+}
+
+.ct_side_bar ul li a:hover,
+.ct_side_bar ul li a.active {
+
+  color: var(--primary);
+  background: #fff;
+  font-weight: 500;
+
+}
+
+.ct_side_bar ul li:nth-child(1) a.active svg path,
+.ct_side_bar ul li:nth-child(1) a:hover svg path , 
+.ct_side_bar ul li:nth-child(2) a.active svg path,
+.ct_side_bar ul li:nth-child(2) a:hover svg path,
+.ct_side_bar ul li:nth-child(6) a.active svg path,
+.ct_side_bar ul li:nth-child(6) a:hover svg path 
+
+{
+    fill: var(--primary);
+   
+    
+}
+
+
+
+.ct_side_bar ul li:nth-child(3) a.active svg path,
+.ct_side_bar ul li:nth-child(3) a:hover svg  path ,
+.ct_side_bar ul li:nth-child(4) a.active svg path,
+.ct_side_bar ul li:nth-child(4) a:hover svg path ,
+.ct_side_bar ul li:nth-child(7) a.active svg path,
+.ct_side_bar ul li:nth-child(7) a:hover svg path
+
+{
+  
+    stroke: var(--primary);
+}
+
+
+
+
+.ct_menu_bar,
+.ct_close_sidebar {
+  display: none;
+}
+
+.ct_right_panel {
+  width: calc(100% - 258px);
+  margin-left: 258px;
+  transition: 0.4s ease all;
+}
+
+.ct_logout_btn{
+    margin-top: auto;
+    padding: 24px 32px;
+  
+    flex-shrink: 0;
+}
+
+.ct_logout_btn a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #F13E3E;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 0px;
+  background-color: #F5FAFB;
+  padding: 16px 32px;
+
+}
+
+
+.ct_admin_logo{
+    margin: 20px ;
+    flex-shrink: 0;
+    background-color: #fff;
+    padding: 26px 42px;
+    border-radius: 10px;
+}
+
+.ct_admin_logo img {
+  width: 133px;
+  margin-inline: auto;
+  display: block;
+}
+
+
+
+.ct_right_dropdown.dropdown ul {
+  padding: 0px;
+  border: 0px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.09);
+  padding-block: 15px;
+}
+
+
+.ct_right_dropdown.dropdown .dropdown-item {
+
+  color: var(--text-para);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 20px;
+
+
+}
+.ct_img_36{
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary-color);
+  color: #fff !important;
+}
+
+
+.header_divider{
+  /* background: #BCC9CA4D; */
+border: 1px solid  #BCC9CA4D;
+height: 32px;
+}
+
+
+.ct_right_dropdown button {
+  border: 0px;
+  padding: 11px 16px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 6px;
+}
+
+
+/*  */
+
+
+ .notification_icon{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+
+}
+
+.notification_dot{
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+  
+    border-radius: 50%;
+}
+
+.notification_menu{
+    width: 460px;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    overflow: hidden;
+    margin-top: 14px !important;
+}
+
+.notification_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+
+.notification_header a{
+    color:#FD7E08;
+    font-size:13px;
+    text-decoration:none;
+}
+
+.notification_item{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:16px 20px;
+    transition:.3s;
+}
+
+.notification_item:hover{
+    background:#fafafa;
+}
+
+.notification_item h6{
+    margin:0;
+    font-size:16px;
+    font-weight:300;
+
+}
+
+.notification_item p{
+    margin:4px 0 0;
+    font-size:14px;
+    color:var(--text-para);
+}
+
+.notification_right{
+    text-align:right;
+    min-width:35px;
+}
+
+.notification_right span:first-child{
+    display:block;
+    font-size:14px;
+    color:var(--text-para);
+    font-weight: 500;
+}
+
+.notification_right .dot{
+    width:8px;
+    height:8px;
+  background: #8150ed;
+
+    border-radius:50%;
+    display:inline-block;
+    margin-top:8px;
+}
+
+.unread{
+    background:#fff;
+}
+
+/* sidebar header css end*/
+
+
+
+
+
+      
+
+        .appointment-wrapper {
+            padding: 0 14px 30px;
+        }
+
+        /* =================================
+           BOOTSTRAP TABS
+        ================================= */
+
+        .appointment-tabs {
+            border-bottom: 1px solid #e7ebee;
+            gap: 29px;
+            margin-bottom: 30px;
+        }
+
+        .appointment-tabs .nav-link {
+            position: relative;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            padding: 17px 24px 14px;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .appointment-tabs .nav-link:hover {
+            border: 0;
+            color: #008b91;
+        }
+
+        .appointment-tabs .nav-link.active {
+            border: 0;
+            background: transparent;
+            color: #008b91;
+        }
+
+        .appointment-tabs .nav-link.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: #008b91;
+        }
+
+
+        /* =================================
+           MAIN
+        ================================= */
+
+    
+
+
+        /* =================================
+           APPOINTMENT CARD
+        ================================= */
+
+        .appointment-card {
+            background: #fff;
+            border: 1px solid #e5e9eb;
+            border-radius: 7px;
+            overflow: hidden;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, .025);
+            margin-bottom: 14px;
+            padding: 24px;
+        }
+
+      
+
+
+        /* Hospital image */
+
+        .hospital-image {
+           width: 100%;
+            height: 128px;
+            flex: 0 0 192px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hospital-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .location-tag {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+          background: #FFFFFFE5;
+box-shadow: 0px 1px 2px 0px #0000000D;
+
+backdrop-filter: blur(8px);
+
+            color: var(--primary);
+            font-size: 12px;
+         
+        }
+
+
+        /* Appointment information */
+
+        .appointment-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .appointment-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .hospital-name {
+            margin: 0;
+            font-size: 18px;
+       
+            font-weight: 500;
+        }
+
+        .hospital-speciality {
+            margin-top: 4px;
+            color: var(--text_para);
+            font-size: 14px;
+         
+        }
+
+
+        /* Status */
+
+        .status {
+            flex-shrink: 0;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 14px;
+           
+            font-weight: 500;
+        }
+
+        .status.confirmed {
+            background: #d8f7da;
+            color: #16822b;
+        }
+
+        .status.pending {
+            background: #fff5c7;
+            color: #8d7900;
+        }
+
+        .status.cancelled {
+            background: #ffe2e2;
+            color: #c23b3b;
+        }
+
+
+        /* Doctor */
+
+        .doctor-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 9px;
+        }
+
+        .doctor-image {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .doctor-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =================================
+           APPOINTMENT DETAILS
+        ================================= */
+
+        .appointment-details {
+            margin-top: 12px;
+            background: #F8FAFC;
+            border-radius: 8px;
+         flex-wrap: wrap;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .detail-label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--text_para);
+            font-size: 12px;
+          font-weight: 500;
+        }
+
+    
+
+        .detail-value {
+            font-size: 14px;
+            font-weight: 600;
+      
+        }
+
+
+        /* =================================
+           FOOTER
+        ================================= */
+
+        .appointment-footer {
+        
+            border-top: 1px solid #edf0f2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+           
+            margin-top: 24px;
+            padding-top: 24px;
+        }
+
+        .review-btn,
+        .details-btn {
+         
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 24px;
+        }
+
+        .review-btn {
+            border: 1px solid #cdd2d5;
+            color: #a4a8aa;
+            background: #fff;
+        }
+
+        .review-btn i {
+            margin-right: 5px;
+        }
+
+        .details-btn {
+            border: 1px solid #008d94;
+            background: #008d94;
+            color: #fff;
+            min-width: 74px;
+        }
+
+
+        /* =================================
+           CALENDAR
+        ================================= */
+
+        .calendar-card {
+            background: #fff;
+            border: 1px solid #e5e9eb;
+            border-radius: 7px;
+            padding: 13px 10px 11px;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, .025);
+        }
+
+        .calendar-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3px 8px;
+     
+        }
+
+        .calendar-heading h5 {
+            margin: 0;
+              font-weight: 600;
+            font-size: 16px;
+        }
+
+        /*
+            Flatpickr customization
+        */
+
+        .flatpickr-calendar {
+            width: 100% !important;
+            box-shadow: none !important;
+            border: 0;
+            background: transparent !important;
+        }
+
+        .flatpickr-current-month {
+            display: none !important;
+        }
+
+
+        .flatpickr-innerContainer {
+            border: 0;
+        }
+
+        .flatpickr-rContainer {
+            width: 100%;
+        }
+
+        .flatpickr-days {
+            width: 100%;
+        }
+
+        .dayContainer {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        .flatpickr-weekdays {
+            width: 100%;
+            background: transparent;
+        }
+
+        .flatpickr-weekday {
+            background: transparent;
+            color: #5d6971;
+            font-size: 7px;
+            font-weight: 500;
+        }
+
+        .flatpickr-day {
+            max-width: none;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 50%;
+            font-size: 8px;
+            color: #273039;
+        }
+
+        .flatpickr-day:hover {
+            background: #e8f7f8;
+            border-color: transparent;
+        }
+
+        .flatpickr-day.prevMonthDay,
+        .flatpickr-day.nextMonthDay {
+            color: #b9c0c5;
+        }
+
+        .flatpickr-day.selected,
+        .flatpickr-day.selected:hover {
+            background: #008b91;
+            border-color: #008b91;
+            color: #fff;
+        }
+
+        .flatpickr-day.event-date {
+            background: #e8f7f8;
+            border-color: #e8f7f8;
+            color: #008b91;
+        }
+
+        .flatpickr-day.event-date.selected {
+            background: #008b91;
+            border-color: #008b91;
+            color: #fff;
+        }
+
+
+        /* =================================
+           TAB CONTENT
+        ================================= */
+
+        .tab-content {
+            width: 100%;
+        }
+
+        .tab-pane {
+            width: 100%;
+        }
+
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 767px) {
+
+        
+
+            .calendar-card {
+                max-width: 250px;
+            }
+        }
+
+
+        @media (max-width: 575px) {
+
+            .appointment-wrapper {
+                padding: 0 10px 25px;
+            }
+
+            .appointment-tabs {
+                gap: 20px;
+            }
+
+       
+
+            .appointment-card-main {
+                padding: 12px;
+                gap: 10px;
+            }
+
+         
+
+       
+
+          
+        }
+
+
+        @media (max-width: 400px) {
+
+            .appointment-card-main {
+                flex-wrap: wrap;
+            }
+
+            .hospital-image {
+                width: 100%;
+                flex-basis: 100%;
+                height: 130px;
+            }
+
+            .appointment-info {
+                width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+
+
+        .ct_modal_btn_cancel{
+    display: block;
+  position: relative;
+  overflow: hidden;
+ padding:12px 18px;
+ 
+  border-radius: 12px;
+  background: transparent;
+      border: 1px solid #F5FAFB;
+    color: var(--text-red);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+  transition: color .4s ease;
+
+}
+
+.ct_modal_btn_cancel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+    background: #F5FAFB;
+
+  transform: scaleX(1);       
+  transform-origin: right;   
+  transition: transform .45s ease;
+  z-index: -1;
+}
+
+.ct_close_icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  outline: none;
+background: var(--primary);
+height: 36px;
+width: 36px;
+border-radius: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+/* ===== Modal Button ===== */
+
+.ct_modal_btn{
+   display: block;
+  position: relative;
+  overflow: hidden;
+  padding:12px 18px;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+  transition: color .4s ease;
+}
+
+.ct_modal_btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary);
+  transform: scaleX(1);       
+  transform-origin: right;   
+  transition: transform .45s ease;
+  z-index: -1;
+}
+
+.ct_modal_btn:hover {
+  color: var(--primary);
+}
+
+.ct_modal_btn:hover::before {
+  transform: scaleX(0);   
+
+}
+
+
+
+.ct_custom_white_box{
+  border: 1px solid #EAEFEF;
+  background: #FFFFFF;
+box-shadow: 0px 4px 12px 0px #0A252E0A;
+padding: 24px;
+border-radius: 16px;
+}
+
+
+
+
+
+/*  */
+
+
+  
+
+
+
+
+  .clinic-img{
+    width: 100%;
+
+  height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+
+
+  .btn-message{
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+  }
+
+
+  hr.divider{
+    border-top: 1px solid #F1F5F9;
+   
+  }
+
+  .status-badge-green{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+   background: #F0FDF4;
+
+   color: #15803D;
+   border: 1px solid #BBF7D0;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+
+ 
+
+  .btn-reschedule{
+  
+    color: var(--primary);
+    border-radius: 999px;
+    background: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--primary);
+  
+  }
+   .btn-reschedule:hover{
+    color:#fff;
+    background: var(--primary);
+
+  }
+ 
+  .btn-cancel{
+  border: 1px solid #FFB8B8;
+    color: var(--text-red);
+   background: #FEEBEB;
+
+
+      border-radius: 999px;
+
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .btn-cancel:hover{
+    background: #fbdcdc;
+    color: var(--red-text);
+  }
+
+  /* ---------- Responsive tweaks ---------- */
+  /* Phones and tablets in portrait (<768px): everything stacks, matches Bootstrap's md breakpoint */
+  @media (max-width: 767.98px){
+    .appt-card{
+      margin: 1.25rem;
+      padding: 1rem;
+    }
+    .clinic-img{
+      min-height: 70px;
+      margin-bottom: 0.5rem;
+    }
+    .top-row > [class*="col"]{
+      margin-bottom: 0.75rem;
+    }
+    .btn-message{
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .bottom-row{
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 0.75rem;
+    }
+    .bottom-actions{
+      width: 100%;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .bottom-actions .btn{
+      flex: 1;
+    }
+  }
+
+  /* Small phones only: reduce the 2-column split so labels don't crowd */
+  @media (max-width: 400px){
+    .top-row .col-6{
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }

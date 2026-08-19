@@ -19,6 +19,7 @@
     top: 15px;
     font-size: 22px;
    transition: transform 0.4s ease;
+   color: #fff;
   }
 
   .ct_close_sidebar:hover {
@@ -46,5 +47,8 @@
       .ct_width_100_575{
         width: 100%;
       }
+      .ct_px_28 {
+    padding-inline: 15px;
+}
     
 }

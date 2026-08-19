@@ -253,7 +253,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 265px;
+  width: 258px;
   height: 100vh;
   background: linear-gradient(180deg, #0A8589 0%, #0A8589 100%);
 
@@ -335,8 +335,8 @@ body {
 }
 
 .ct_right_panel {
-  width: calc(100% - 265px);
-  margin-left: 265px;
+  width: calc(100% - 258px);
+  margin-left: 258px;
   transition: 0.4s ease all;
 }
 

@@ -46,6 +46,8 @@
       }
       .ct_width_100_575{
         width: 100%;
+       
+        min-width: auto !important;
       }
       .ct_px_28 {
     padding-inline: 15px;

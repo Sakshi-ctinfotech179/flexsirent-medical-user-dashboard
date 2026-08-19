@@ -52,5 +52,8 @@
       .ct_px_28 {
     padding-inline: 15px;
 }
+ .flatpickr-day{
+  font-size: 14px;
+ }
     
 }
